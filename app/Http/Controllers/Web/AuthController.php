@@ -19,7 +19,7 @@ class AuthController extends Controller
     //
     public function login()
     {
-        return view('web.login');
+        return view('auth.login');
     }
 
     function checkLogin(Request $request)
@@ -42,7 +42,7 @@ class AuthController extends Controller
             return view('admin.home');
         }
 
-        return redirect()->back()->with('error', 'Failed login')->with('email', $email);
+        return redirect()->back()->with('notice', 'Failed login')->with('email', $email);
     }
 
 
@@ -55,7 +55,7 @@ class AuthController extends Controller
 
     public function register()
     {
-        return view('web.register');
+        return view('auth.register');
     }
 
     public function store(Request $request)
@@ -76,7 +76,7 @@ class AuthController extends Controller
         ];
 
         User::create($data);
-        return view('web.register')->with('notice', 'Create User Successfully');
+        return view('auth.register')->with('notice', 'Create User Successfully');
     }
 
     public function profile()

@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Login</title>
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-    @include('web.layout.style')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    @stack('style')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/brands.min.css" integrity="sha512-nS1/hdh2b0U8SeA8tlo7QblY6rY6C+MgkZIeRzJQQvMsFfMQFUKp+cgMN2Uuy+OtbQ4RoLMIlO2iF7bIEY3Oyg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/fontawesome.min.css" integrity="sha512-R+xPS2VPCAFvLRy+I4PgbwkWjw1z5B5gNDYgJN5LfzV4gGNeRQyVrY7Uk59rX+c8tzz63j8DeZPLqmXvBxj8pA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body class="bg-gray-sl">
@@ -47,7 +50,7 @@
                             <i class="fa-solid fa-lock absolute mt-4 ml-2"></i>
                             <input type="password" name="confirm" placeholder="Confirm Password" class="bg-gray-sl w-full h-10 px-8">
                         </div>
-                        <div class="inline-flex justify-between w-full my-6">
+                        <div class="inline-flex justify-between w-full px-4 my-6">
                             <div class="inline-flex">
                                 <input type="checkbox" id="" name="" value="" class="mr-3">
                                 <p>Remember me</p>
@@ -56,7 +59,7 @@
                                 <a href="{{ route('forget.password.get')}}">Forgot password ?</a>
                             </div>
                         </div>
-                        <button type="submit" class="my-6 w-full h-12 text-white text-2xl bg-[#000000]"><b>Create</b></button>
+                        <button type="submit" class=" my-6 w-full h-12 text-white text-2xl bg-[#000000]"><b>Create</b></button>
                     </form>
                 </li>
                 <li>

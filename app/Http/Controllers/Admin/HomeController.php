@@ -16,6 +16,6 @@ class HomeController extends Controller
 
     public function logout(){
 
-        return view('web.login');
+        return view('auth.login');
     }
 }
