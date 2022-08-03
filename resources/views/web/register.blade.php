@@ -14,9 +14,9 @@
     @stack('style')
 </head>
 
-<body>
-    <div class="font-roboto ">
-        <div class="mx-auto w-full lg:w-1/5 lg:border border-gray px-5 my-0 lg:my-10 rounded-xl">
+<body class="bg-gray-sl">
+    <div class="font-roboto">
+        <div class="mx-auto w-full bg-white lg:shadow-2xl lg:w-1/5 lg:border border-gray px-5 my-0 lg:my-10 rounded-xl">
             <ul>
                 <li>
                     <p class="text-center text-4xl my-10"><b>Register</b></p>
@@ -53,7 +53,7 @@
                                 <p>Remember me</p>
                             </div>
                             <div class="text-blue">
-                                <a href="">Forgot password ?</a>
+                                <a href="{{ route('forget.password.get')}}">Forgot password ?</a>
                             </div>
                         </div>
                         <button type="submit" class="my-6 w-full h-12 text-white text-2xl bg-[#000000]"><b>Create</b></button>
