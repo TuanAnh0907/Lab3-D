@@ -27,12 +27,12 @@ use Carbon\Carbon;
 class AuthController extends Controller
 {
     //
-    public function getLogin()
+    public function login()
     {
         return view('web.login');
     }
 
-    function postlogin(Request $request)
+    function checkLogin(Request $request)
     {
         $email = $request->email;
 
@@ -49,7 +49,7 @@ class AuthController extends Controller
                 Cookie::queue('password', $request->password, 1440);
             }
 
-            return redirect('admin/home');
+            return view('admin.home');
         }
 
         return redirect()->back()->with('error', 'Failed login')->with('email', $email);
@@ -59,10 +59,11 @@ class AuthController extends Controller
     function logout()
     {
         Auth::logout();
-        return redirect('/');
+
+        return view('web.home');
     }
 
-    public function getRegister()
+    public function register()
     {
         return view('web.register');
     }
@@ -85,7 +86,7 @@ class AuthController extends Controller
         ];
 
         User::create($data);
-        return redirect()->route('web.register')->with('notice', 'Create User Successfully');
+        return view('web.register')->with('notice', 'Create User Successfully');
     }
 
     public function profile()
@@ -120,10 +121,9 @@ class AuthController extends Controller
 
             $user->update($data);
 
-            return redirect()->route('web.profile')->with('notice', 'Updated successfully');
+            return view('web.editprofile')->with('notice', 'Updated successfully');
         } else {
-            return redirect()->route('web.profile')->with('notice', 'Updated Failed! Password check false ');
+            return view('web.editprofile')->with('notice', 'Updated Failed! Password check false ');
         }
     }
-
 }

@@ -10,17 +10,17 @@ class HomeController extends Controller
 {
     //
 
-    public function getIndex(){
+    public function index(){
 
         return view('web.home');
     }
 
-    public function getDetail(){
+    public function detail(){
 
         return view('web.detail');
     }
 
-    public function getCategory(){
+    public function category(){
 
         return view('web.categories');
     }

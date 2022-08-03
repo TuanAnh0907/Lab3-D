@@ -9,12 +9,12 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     //
-    public function getIndex(){
+    public function home(){
 
         return view('admin.home');
     }
 
-    public function getLogin(){
+    public function logout(){
 
         return view('web.login');
     }

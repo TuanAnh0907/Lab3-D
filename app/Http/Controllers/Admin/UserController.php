@@ -49,12 +49,12 @@ class UserController extends Controller
 
         $user->update($data);
 
-        return redirect()->route('admin.user.index');
+        return view('admin.user.list');
     }
 
     public function delete($id)
     {
         User::where('id', $id)->delete();
-        return Redirect()->route('admin.user.index');
+        return view('admin.user.list');
     }
 }

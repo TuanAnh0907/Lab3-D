@@ -23,19 +23,19 @@ use App\Http\Controllers\Web\AuthController;
 
 /* Web page */
 
-Route::get('/', [WebHomeCrl::class, 'getIndex'])->name('web.home');
+Route::get('/', [WebHomeCrl::class, 'index'])->name('web.home');
 
-Route::get('detail', [WebHomeCrl::class, 'getDetail'])->name('web.detail');
+Route::get('detail', [WebHomeCrl::class, 'detail'])->name('web.detail');
 
-Route::get('category', [WebHomeCrl::class, 'getCategory'])->name('web.category');
+Route::get('category', [WebHomeCrl::class, 'category'])->name('web.category');
 
 /**/
 
 Route::prefix('web')->group(function () {
 
-    Route::get('login', [AuthController::class, 'getLogin'])->name('web.login');
+    Route::get('login', [AuthController::class, 'login'])->name('web.login');
 
-    Route::post('check', [AuthController::class, 'postlogin'])->name('web.auth.login');
+    Route::post('check', [AuthController::class, 'checkLogin'])->name('web.auth.login');
 
     Route::get('profile', [AuthController::class, 'profile'])->name('web.profile');
 
@@ -45,17 +45,17 @@ Route::prefix('web')->group(function () {
 
 Route::get('logout', [AuthController::class, 'logout'])->name('web.logout');
 /**/
-Route::get('register', [AuthController::class, 'getRegister'])->name('web.register');
+Route::get('register', [AuthController::class, 'register'])->name('web.register');
 
-Route::post('create', [AuthController::class, 'store'])->name('web.register.store');
+Route::post('register', [AuthController::class, 'store'])->name('web.register.store');
 
 // Admin page
 
 Route::prefix('admin')->middleware('admin.login')->group(function () {
 
-    Route::get('home', [AdminHomeCrl::class, 'getIndex'])->name('admin.home');
+    Route::get('home', [AdminHomeCrl::class, 'home'])->name('admin.home');
 
-    Route::get('logout', [AdminHomeCrl::class, 'getLogin'])->name('admin.logout');
+    Route::get('logout', [AdminHomeCrl::class, 'logout'])->name('admin.logout');
 
     Route::prefix('user')->group(function () {
 
