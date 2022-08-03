@@ -53,7 +53,7 @@
     </div>
 
     <div class="menu text-center w-full border-t border-b border-gray-sl lg:my-3 lg:py-3 hidden lg:inline-block">
-        <a class="px-5 pt-3 text-xl hover:bg-slate-300 border-gray-200 " href="{{ route('web.category')}}">World</a>
+        <a class="px-5 pt-3 text-xl hover:bg-slate-300 border-gray-200" href="{{ route('web.category')}}">World</a>
         <a class="px-5 pt-3 text-xl hover:bg-slate-300 border-gray-200" href="{{ route('web.category')}}">Politics</a>
         <a class="px-5 pt-3 text-xl hover:bg-slate-300 border-gray-200" href="{{ route('web.category')}}">Business</a>
         <a class="px-5 pt-3 text-xl hover:bg-slate-300 border-gray-200" href="{{ route('web.category')}}">Opinion</a>
@@ -63,7 +63,7 @@
         <a class="px-5 pt-3 text-xl hover:bg-slate-300 border-gray-200" href="{{ route('web.category')}}">Sport</a>
         <a class="px-5 pt-3 text-xl hover:bg-slate-300 border-gray-200" href="{{ route('web.category')}}">Entertaiment</a>
         <a class="px-5 pt-3 text-xl hover:bg-slate-300 border-gray-200" href="{{ route('web.category')}}">Travel</a>
-        <a class="px-5 pt-3 text-xl hover:bg-slate-300 border-gray-200 " href="{{ route('web.category')}}">More</a>
+        <a class="px-5 pt-3 text-xl hover:bg-slate-300 border-gray-200" href="{{ route('web.category')}}">More</a>
         <a class="px-5 text-xl hover:bg-slate-300 border-gray-200 float-right text-blue pr-10" href="{{ route('web.category')}}">
             <i class="fas fa-newspaper fa-1x mx-2 text-blue"></i> E-PAPER </a>
     </div>

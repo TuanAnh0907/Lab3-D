@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -14,7 +15,7 @@ class UserController extends Controller
     public function index()
     {
 
-        $users = User::paginate(20);
+        $users = User::paginate(10);
 
         return view('admin.user.list', compact('users'));
     }
@@ -22,6 +23,7 @@ class UserController extends Controller
     public function edit($id)
     {
         $users = User::find($id);
+
         return view('admin.user.edit', compact('users',));
     }
 
@@ -36,8 +38,11 @@ class UserController extends Controller
 
         $data = [
             'name' => $request->name,
-            'is_admin' => $request->is_admin
         ];
+
+        if ($user->id != Auth::user()->id) {
+            $data['is_admin'] = $request->is_admin;
+        }
 
         if ($request->password) {
             $this->validate($request, [
@@ -49,13 +54,16 @@ class UserController extends Controller
 
         $user->update($data);
 
-        return view('admin.user.list');
+        return redirect()->route('admin.user.index');
     }
 
     public function delete($id)
     {
-        User::where('id', $id)->delete();
+        $user = User::find($id);
 
-        return view('admin.user.list');
+        if ($user->id != Auth::user()->id) {
+            User::where('id', $id)->delete();
+        }
+        return redirect()->route('admin.user.index');
     }
 }

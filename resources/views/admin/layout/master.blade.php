@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,12 +15,12 @@
     @stack('style')
 
 </head>
-<body>
 
+<body>
     @include('admin.layout.header')
 
-    <div class="inline-flex w-full h-full">
-        <div class="w-1/6">
+    <div class="inline-flex w-full h-full float-left">
+        <div class="w-1/6 min-h-screen">
             @include('admin.layout.sidebar')
         </div>
         <div class="w-full">
@@ -29,7 +30,7 @@
 
     @include('admin.layout.script')
 
-    @stack('script'
-    )
+    @stack('script')
 </body>
+
 </html>
