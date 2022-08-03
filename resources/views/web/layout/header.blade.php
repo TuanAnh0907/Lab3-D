@@ -1,4 +1,4 @@
-<header class="lg:mx-10 lg:mb-4 font-roboto ">
+<header class="lg:mx-10 lg:mb-4 font-roboto h-auto">
     <div class="inline-flex justify-between w-full lg:border-b border-gray-sl border-dashed ">
 
         <nav class="bg-white px-3 py-1">
@@ -19,28 +19,21 @@
             </p>
         </div>
 
-        <div class="lg:text-right py-1 px-3 lg:py-5 lg:inline-flex">
-            <div>
+        <div class="lg:text-right py-1 px-3 gap-3 lg:py-5 inline-flex">
+            <div class="my-1">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input class="hidden placeholder:px-4 focus:px-2 focus:outline border-none lg:w-36 lg:h-10 lg:inline-block" type="search" size="20" placeholder="SEARCH">
             </div>
             @if ( Auth::check() )
-            <div class="text-xl my-1 text-left">
+            <div class="text-xl my-1 text-center hidden lg:inline-block relative">
                 <nav>
                     <div id="dropdown-wrapper" class="relative">
                         <button onclick="toggleMenu()" class="inline">
-                            <p class="text-xl text-black ">
+                            <p class="lg:text-xl text-sm ">
                                 Hi, {{ Auth::user()->name }} </p>
                         </button>
-
-                        <div id="menu" class="hidden bg-white drop-shadow-md absolute top-12 -right-4 w-56">
-                            <!-- <div class="px-10 py-2 hover:bg-gray "><a href="{{ route('admin.home') }}">Admin Page</a>
-                            </div> -->
+                        <div id="menu" class="hidden text-xs lg:text-xl bg-white drop-shadow-md absolute top-6 lg:top-12 -right-4 w-40 lg:w-52">
                             <div class="px-10 py-2 hover:bg-gray "><a class="" href="{{ route('web.profile') }}">Edit My profile</a>
-                            </div>
-                            <div class="px-10 py-2 hover:bg-gray"> <a href="#">My Ibox</a>
-                            </div>
-                            <div class="px-10 py-2 hover:bg-gray"> <a href="#">Comment</a>
                             </div>
                             <div class="px-10 py-2 hover:bg-gray-sl border-t border-gray"> <a href="{{ route('web.logout') }}">Login out</a>
                             </div>

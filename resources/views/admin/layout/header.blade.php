@@ -39,12 +39,12 @@
                             </button>
 
                             <div id="menu" class="hidden bg-white drop-shadow-md absolute top-12 right-1 w-56">
-                                <div class="px-10 py-2 hover:bg-gray "><a class="" href="#">Edit My profile</a>
+                                <!-- <div class="px-10 py-2 hover:bg-gray "><a class="" href="#">Edit My profile</a>
                                 </div>
                                 <div class="px-10 py-2 hover:bg-gray"> <a href="#">My Ibox</a>
                                 </div>
                                 <div class="px-10 py-2 hover:bg-gray"> <a href="#">Chat</a>
-                                </div>
+                                </div> -->
                                 <div class="px-10 py-2 hover:bg-gray-sl border-t border-gray"> <a href="{{ route('admin.logout') }}">Login out</a>
                                 </div>
                             </div>

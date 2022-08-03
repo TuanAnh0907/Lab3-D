@@ -22,7 +22,7 @@
         <div class="lg:px-3 lg:col-span-1 lg:py-2 py-10">
             <div class="inline-flex justify-between w-full">
                 <p class="text-sm lg:text-2xl px-3 my-3 py-2 h-9 lg:h-11 bg-yellow"> TOP STORIES </p>
-                <p class="text-sm lg:text-2xl pt-4 text-blue-500 lg:hidden inline-block"> View all </p>
+                <p class="text-sm lg:text-2xl pt-4 text-blue lg:hidden inline-block"> View all </p>
             </div>
             <div class="px-3 py-3 hover:shadow-md lg:text-xl border-dashed border-b border-gray" id="top-stories">
                 <a href="#">PM unveils Shiva status in Coimbatore on Mahashivratri</a>
@@ -39,7 +39,7 @@
             <div class="px-3 py-3 hover:shadow-md lg:text-xl border-dashed border-b border-gray" id="top-stories">
                 <a href="#">Jayalalithaa’s niece Deepa floats political outfit</a>
             </div>
-            <div class="px-3 py-3 hover:shadow-md lg:text-xl border-dashed border-b border-gray"  id="top-stories">
+            <div class="px-3 py-3 hover:shadow-md lg:text-xl border-dashed border-b border-gray" id="top-stories">
                 <a href="#">‘China made mistake of ignoring India’s talent’</a>
             </div>
             <div class="px-3 py-3 hover:shadow-md lg:text-xl border-dashed " id="top-stories">
@@ -71,14 +71,14 @@
 
                     <div class="px-5 pt-3 text-right py-4">
                         <a href="">
-                            <p class="text-blue-600"> <b class=" lg:inline-block hidden">Next</b><b> > </b> </p>
+                            <p class="text-blue"> <b class=" lg:inline-block hidden">Next</b><b> > </b> </p>
                         </a>
                     </div>
 
                 </div>
 
                 <div class="pt-2 xl:block hidden">
-                    <a href="" class="text-blue-600 font-merriweather">
+                    <a href="" class="text-blue text-2xl font-merriweather">
                         <p> <b> Get the Quick Bites delivered to your inbox daily </b> </p>
                     </a>
                     <div class="w-full border-b border-blue-600 my-6 inline-flex">
@@ -106,13 +106,13 @@
                 <div class="bg-gray-sl text-xl text-center mr-12 hidden lg:block">Mahashivratri symbolizes a
                     union of divinity with a purpore of overcoming darkness and injustice.</div>
 
-                <div class=" text-blue-500 text-xl mx-2 hidden lg:block"><a href="">View all</a></div>
+                <div class=" text-blue text-xl mx-2 hidden lg:block"><a href="">View all</a></div>
 
             </div>
 
-            <div class="overflow-x-scroll text-center font-merriweather inline-flex justify-between lg:pt-4 h-76 lg:h-72 lg:w-full">
+            <div class="overflow-x-scroll text-center font-merriweather inline-flex justify-between gap-4 lg:pt-4 h-76 lg:h-72 lg:w-full">
 
-                <div class="relative flex-shrink-0 mr-3">
+                <div class="relative flex-shrink-0">
                     <a href="{{ route('web.detail')}}">
                         <p class="bg-white text-lg lg:text-xl mt-48 mx-6 lg:pl-5 lg:w-80 absolute">Woman Do Like to
                             Compete Against
@@ -121,7 +121,7 @@
                     </a>
                 </div>
 
-                <div class="relative flex-shrink-0 mr-3">
+                <div class="relative flex-shrink-0">
                     <a href="{{ route('web.detail')}}">
                         <p class="bg-white text-lg lg:text-xl mt-48 mx-6 lg:pl-5 lg:w-80 absolute">Woman Do Like to
                             Compete Against
@@ -130,7 +130,7 @@
                     </a>
                 </div>
 
-                <div class="relative flex-shrink-0 mr-3">
+                <div class="relative flex-shrink-0">
                     <a href="{{ route('web.detail')}}">
                         <p class="bg-white text-lg lg:text-xl mt-48 mx-6 lg:pl-5 lg:w-80 absolute">Woman Do Like to
                             Compete Against
@@ -139,7 +139,7 @@
                     </a>
                 </div>
 
-                <div class="relative flex-shrink-0 mr-3">
+                <div class="relative flex-shrink-0">
                     <a href="{{ route('web.detail')}}">
                         <p class="bg-white text-lg lg:text-xl mt-48 mx-6 lg:pl-5 lg:w-80 absolute">Woman Do Like to
                             Compete Against
@@ -148,7 +148,7 @@
                     </a>
                 </div>
 
-                <div class="relative flex-shrink-0 mr-3">
+                <div class="relative flex-shrink-0">
                     <a href="{{ route('web.detail')}}">
                         <p class="bg-white text-lg lg:text-xl mt-48 mx-6 lg:pl-5 lg:w-80 absolute">Woman Do Like to
                             Compete Against
@@ -157,7 +157,7 @@
                     </a>
                 </div>
 
-                <div class="relative flex-shrink-0 mr-3">
+                <div class="relative flex-shrink-0">
                     <a href="{{ route('web.detail')}}">
                         <p class="bg-white text-lg lg:text-xl mt-48 mx-6 lg:pl-5 lg:w-80 absolute">Woman Do Like to
                             Compete Against
@@ -361,15 +361,15 @@
 
                 <div>
                     <a href="">
-                        <p class="px-5 py-2 text-blue-500"><b> View all Videos </b></p>
+                        <p class="px-5 py-2 text-blue"><b> View all Videos </b></p>
                     </a>
                 </div>
 
             </div>
 
-            <div class="xl:grid xl:grid-cols-4 xl:gap-2 lg:mb-3 lg:h-168 lg:border-b lg:border-dashed lg:border-l lg:border-gray-300">
+            <div class="xl:grid xl:grid-cols-4 xl:gap-2 lg:mb-3 lg:h-168 lg:border-b lg:border-dashed lg:border-l lg:border-gray-sl">
 
-                <div class="2xl:col-span-3 lg:col-span-4 my-8 border-r border-gray-300 ">
+                <div class="2xl:col-span-3 lg:col-span-4 mx-auto my-8  ">
 
                     <ul class="tabs w-11/12 mx-6 text-center justify-around hidden lg:inline-flex">
                         <li data-tab-target="#trending" class="tab active">Trending</li>
@@ -530,44 +530,44 @@
 
                 </div>
 
-                <div class="lg:col-span-1 w-full overflow-auto my-2 mt-8 hidden 2xl:block">
+                <div class="lg:col-span-1 w-full h-160 border-l border-gray overflow-y-auto mt-4 py-8 hidden 2xl:block">
 
-                    <div class="w-80 h-56 relative">
+                    <div class="relative w-4/5 mx-auto my-4">
                         <p class="absolute text-white text-xl mt-20 w-72 mx-3 font-merriweather">Isro launches 104
                             satellites in a single
                             mission </p>
                         <img src="../image/menu-img1.png " alt="" class="object-cover">
                     </div>
 
-                    <div class=" w-80 h-56 relative">
+                    <div class="relative w-4/5 mx-auto my-4">
                         <p class="absolute text-white text-xl mt-20 w-72 mx-3 font-merriweather">Isro launches 104
                             satellites in a single
                             mission </p>
                         <img src="../image/menu-img2.png" alt="" class="object-cover">
                     </div>
 
-                    <div class=" w-80 h-56 relative">
+                    <div class="relative w-4/5 mx-auto my-4">
                         <p class="absolute text-white text-xl mt-20 w-72 mx-3 font-merriweather">Isro launches 104
                             satellites in a single
                             mission </p>
                         <img src="../image/menu-img3.png" alt="" class="object-cover">
                     </div>
 
-                    <div class=" w-80 h-56 relative">
+                    <div class="relative w-4/5 mx-auto my-4">
                         <p class="absolute text-white text-xl mt-20 w-72 mx-3 font-merriweather">Isro launches 104
                             satellites in a single
                             mission </p>
                         <img src="../image/menu-img1.png" alt="" class="object-cover">
                     </div>
 
-                    <div class=" w-80 h-56 relative">
+                    <div class="relative w-4/5 mx-auto my-4">
                         <p class="absolute text-white text-xl mt-20 w-72 mx-3 font-merriweather">Isro launches 104
                             satellites in a single
                             mission </p>
                         <img src="../image/menu-img2.png" alt="" class="object-cover">
                     </div>
 
-                    <div class=" w-80 h-56 relative">
+                    <div class="relative w-4/5 mx-auto my-4">
                         <p class="absolute text-white text-xl mt-20 w-72 mx-3 font-merriweather">Isro launches 104
                             satellites in a single
                             mission </p>
@@ -578,7 +578,7 @@
 
             </div>
 
-            <div class="lg:grid lg:grid-cols-5 lg:gap-2 my-6 lg:pt-10 ml-10 overflow-auto h-full 2xl:h-148">
+            <div class="lg:grid lg:grid-cols-5 lg:gap-4 my-6 lg:pt-10 overflow-auto h-full 2xl:h-148">
 
                 <a href="{{ route('web.detail')}}">
                     <div class="lg:w-full lg:h-48 relative">
@@ -640,10 +640,6 @@
                             often very apprehensive about keeping fish and having an aquarium.</p>
                     </div>
                 </a>
-
-
-
-
             </div>
 
         </div>

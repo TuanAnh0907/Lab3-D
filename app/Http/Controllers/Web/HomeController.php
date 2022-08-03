@@ -20,4 +20,9 @@ class HomeController extends Controller
         return view('web.detail');
     }
 
+    public function getCategory(){
+
+        return view('web.categories');
+    }
+
 }

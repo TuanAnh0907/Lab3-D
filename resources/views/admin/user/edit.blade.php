@@ -34,7 +34,7 @@
                         <input name="is_admin" value="0" @if(!$users->is_admin) @endif checked="true" type="radio"> User
                     </label>
                     <label class="radio-inline">
-                        <input name="is_admin" value="1" @if($users->is_admin) @endif checked="true" type="radio"> Admin
+                        <input name="is_admin" value="1" @if(!$users->is_admin) @endif checked="true" type="radio"> Admin
                     </label>
                 </div>
                 <div class="inline-flex justify-between gap-2 w-full">

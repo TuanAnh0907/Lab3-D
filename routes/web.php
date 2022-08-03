@@ -48,6 +48,7 @@ Route::get('logout', [AuthController::class, 'logout'])->name('web.logout');
 Route::get('register', [AuthController::class, 'getRegister'])->name('web.register');
 
 Route::post('create', [AuthController::class, 'store'])->name('web.register.store');
+
 // Admin page
 
 Route::prefix('admin')->middleware('admin.login')->group(function () {

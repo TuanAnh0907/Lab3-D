@@ -4,7 +4,7 @@
 
 @section('content')
 
-<div class="font-roboto w-1/2 text-center mx-auto">
+<div class="font-roboto w-full lg:w-1/2 text-center mx-auto">
     <div class="">
         <ul>
             <li>
