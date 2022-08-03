@@ -14,16 +14,6 @@ use Illuminate\Http\Request;
 
 use App\Models\User;
 
-
-
-use App\Mail\UserVerification;
-
-use Illuminate\Support\Facades\Mail;
-
-use Illuminate\Support\Facades\Validator;
-
-use Carbon\Carbon;
-
 class AuthController extends Controller
 {
     //
