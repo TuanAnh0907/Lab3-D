@@ -22,6 +22,7 @@ class NewUserFactory extends Factory
             'name' => $this->faker->name(),
             'email' => $this->faker->unique()->safeEmail(),
             'password' => bcrypt('123'),
+            'status' => '0',
             'is_admin'=>'0',
             'created_at' => $this->faker->dateTimeAD(),
             'updated_at' => $this->faker->dateTime(),

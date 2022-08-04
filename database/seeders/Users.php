@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\User;
 
 use Illuminate\Database\Seeder;
+use phpDocumentor\Reflection\Types\Null_;
 
 class Users extends Seeder
 {
@@ -15,7 +16,7 @@ class Users extends Seeder
      */
     public function run()
     {
-        //
+
         $password = bcrypt('123');
 
         $user = [
@@ -24,6 +25,7 @@ class Users extends Seeder
             'email'=>'admin@gmail.com',
             'password'=>$password,
             'is_admin'=>'1',
+            'status'=>'1',
         ];
 
         User::create($user);
