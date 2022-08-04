@@ -26,9 +26,7 @@
                 </li>
                 <li>
                     @if (session('notice'))
-                    <div class="w-full bg-[#68f174]"> {{ session('notice') }} </div>
-                    @else
-                    <div class="w-full bg-[#e43a3a]"> {{ session('notice') }} </div>
+                        <div class="w-full h-10 my-2 text-center bg-[#68f174]"> {{ session('notice') }} </div>
                     @endif
                 </li>
                 <li>

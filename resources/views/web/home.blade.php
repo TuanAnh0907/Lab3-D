@@ -81,7 +81,7 @@
                     <a href="" class="text-blue text-2xl font-merriweather">
                         <p> <b> Get the Quick Bites delivered to your inbox daily </b> </p>
                     </a>
-                    <div class="w-full border-b border-blue-600 my-6 inline-flex">
+                    <div class="w-full border-b border-blue my-6 inline-flex">
                         <input class="w-full" type="text" placeholder="Enter your email">
                         <a href="#" type="submit" class="float-right">
                             <p class="bg-blue text-white h-12 w-28 pt-2 text-center">Sign Up</p>

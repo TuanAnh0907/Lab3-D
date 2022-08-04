@@ -21,7 +21,7 @@
     <main>
         <div class="mx-auto w-full bg-white lg:w-1/5 lg:shadow-2xl lg:border border-gray px-5 my-0 lg:my-20 rounded-xl">
             <div class="justify-center">
-                <div class="text-center text-4xl my-10"><b>Reset Password</b></div>
+                <div class="text-center text-4xl my-10"><b>Confirm Create Account</b></div>
                 <div>
 
                     @if (Session::has('message'))
@@ -30,7 +30,7 @@
                     </div>
                     @endif
 
-                    <form action="{{ route('forget.password.post') }}" method="POST">
+                    <form action="{{ route('confirm.create.account.post') }}" method="POST">
                         @csrf
                         <input type="hidden" name="token" value="{{ $token }}">
                         <div>
@@ -39,7 +39,7 @@
                             </div>
                             <div class="w-full relative">
                                 <i class="fa-regular fa-envelope absolute mt-3 ml-2"></i>
-                                <input type="text" id="email_address" class="bg-gray-sl w-full h-10 px-8" name="email" required autofocus>
+                                <input type="text" id="email_address" value="{{ $account->email }}"  class="bg-gray-sl w-full h-10 px-8" name="email" required autofocus>
                                 @if ($errors->has('email'))
                                 <div class="my-3 text-red">
                                     <span>{{ $errors->first('email') }}</span>
@@ -47,33 +47,7 @@
                                 @endif
                             </div>
                         </div>
-                        <div>
-                            <div class="my-3 py-3">
-                                <label for="password">Password</label>
-                            </div>
-                            <div class="w-full relative">
-                                <i class="fa-regular fa-envelope absolute mt-3 ml-2"></i>
-                                <input type="password" id="password" class="bg-gray-sl w-full h-10 px-8" name="password" required autofocus>
-                                @if ($errors->has('password'))
-                                <div class="my-3 text-red">
-                                    <span>{{ $errors->first('password') }}</span>
-                                </div>
-                                @endif
-                            </div>
-                        </div>
 
-                        <div>
-                            <div class="my-3 py-3">
-                                <label for="password-confirm">Confirm Password</label>
-                            </div>
-                            <div class="w-full relative">
-                                <i class="fa-regular fa-envelope absolute mt-3 ml-2"></i>
-                                <input type="password" id="password-confirm" class="bg-gray-sl w-full h-10 px-8" name="password_confirmation" required autofocus>
-                                @if ($errors->has('password_confirmation'))
-                                <span class="my-3 text-red">{{ $errors->first('password_confirmation') }}</span>
-                                @endif
-                            </div>
-                        </div>
                         <div class="my-3 py-3">
                             <button type="submit" class=" bg-[#000000] text-white w-full h-10  ">
                                 Reset your password

@@ -26,9 +26,7 @@
                 </li>
                 <li>
                     @if (session('notice'))
-                    <div class="col-lg-6">
-                        <div class="alert-danger"> {{ session('notice') }} </div>
-                    </div>
+                        <div class="w-full h-10"> {{ session('notice') }} </div>
                     @endif
                 </li>
 

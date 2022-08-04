@@ -28,14 +28,27 @@
                     <i class="fa-regular fa-envelope absolute mt-3 ml-2"></i>
                     <input type="password" name="confirm" placeholder="Please Enter Confirm Password " class="bg-gray-sl w-full h-10 px-8">
                 </div>
-                <div class="py-3 px-6 inline-flex gap-10 ">
-                    <label>Role</label>
-                    <label class="radio-inline">
-                        <input name="is_admin" value="0" @if(!$users->is_admin) @endif checked="true" type="radio"> User
-                    </label>
-                    <label class="radio-inline">
-                        <input name="is_admin" value="1" @if(!$users->is_admin) @endif checked="true" type="radio"> Admin
-                    </label>
+                <div class="py-3 px-6 w-full">
+                    <div class="inline-flex gap-10">
+                        <label>Role</label>
+                        <label class="radio-inline">
+                            <input name="is_admin" value="0" @if(!$users->is_admin) @endif checked="true" type="radio"> User
+                        </label>
+                        <label class="radio-inline">
+                            <input name="is_admin" value="1" @if($users->is_admin) @endif checked="true" type="radio"> Admin
+                        </label>
+                    </div>
+                </div>
+                <div class="py-3 px-6 w-full">
+                    <div class="inline-flex gap-10">
+                        <label>Status</label>
+                        <label class="radio-inline">
+                            <input name="status" value="0" @if(!$users->status) @endif checked="true" type="radio">No-enable
+                        </label>
+                        <label class="radio-inline">
+                            <input name="status" value="1" @if($users->status) @endif checked="true" type="radio">Enable
+                        </label>
+                    </div>
                 </div>
                 <div class="inline-flex justify-between gap-2 w-full">
                     <button type="submit" class="my-6 w-1/2 h-12 text-white text-2xl bg-blue rounded-lg">User Update</button>

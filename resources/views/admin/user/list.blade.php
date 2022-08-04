@@ -13,6 +13,7 @@
                 <th class="py-3 px-6">Name</th>
                 <th class="py-3 px-6">Email</th>
                 <th class="py-3 px-6">Is-Admin</th>
+                <th class="py-3 px-6">Status</th>
                 <th class="py-3 px-6">Delete</th>
                 <th class="py-3 px-6">Edit</th>
             </tr>
@@ -24,6 +25,7 @@
                 <td class="py-4 px-6"> {{ $User->name }}</td>
                 <td class="py-4 px-6"> {{ $User->email }} </td>
                 <td class="py-4 px-6"> {{ $User->is_admin ? "x" : "" }} </td>
+                <td class="py-4 px-6"> {{ $User->status ? "x" : "" }} </td>
                 <td class="py-4 px-6 text-red"><i class="fa fa-trash-o fa-fw"></i><a href="{{ route('admin.user.delete', $User->id)}}"> Delete </a></td>
                 <td class="py-4 px-6 text-blue"><i class="fa fa-pencil fa-fw"></i> <a href="{{ route('admin.user.edit', $User->id)}}"> Edit </a></td>
             </tr>
