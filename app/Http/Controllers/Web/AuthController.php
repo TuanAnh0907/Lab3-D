@@ -28,7 +28,10 @@ class AuthController extends Controller
 
     function checkLogin(Request $request)
     {
-        $email = $request->email;
+        $this->validate($request, [
+            'email' => 'required|email',
+            'password' => 'required|min:6|max:32',
+        ]);
 
         $arr = [
             'email' => $request->email,
