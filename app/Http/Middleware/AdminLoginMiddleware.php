@@ -23,8 +23,8 @@ class AdminLoginMiddleware
             if (Auth::user()->is_admin == 1) {
                 return $next($request);
             }
-            return redirect()->route('web.home')->with('error','Khong co quyen truy cap');
+            return redirect()->route('web.home')->with('notice','Khong co quyen truy cap');
         }
-        return redirect()->route('web.login')->with('error','Permission denied');
+        return redirect()->route('web.login')->with('notice','Permission denied');
     }
 }

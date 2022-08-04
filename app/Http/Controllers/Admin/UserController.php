@@ -31,13 +31,15 @@ class UserController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
-            'is_admin' => 'required'
+            'is_admin' => 'required',
+            'status' => 'required'
         ]);
 
         $user = User::find($id);
 
         $data = [
             'name' => $request->name,
+            'status' => $request->status,
         ];
 
         if ($user->id != Auth::user()->id) {
