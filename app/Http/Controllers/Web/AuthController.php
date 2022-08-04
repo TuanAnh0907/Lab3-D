@@ -10,6 +10,10 @@ use Illuminate\Support\Facades\Hash;
 
 use Illuminate\Support\Facades\Cookie;
 
+use Illuminate\Support\Facades\Mail;
+
+use Illuminate\Support\Str;
+
 use Illuminate\Http\Request;
 
 use App\Models\User;
@@ -29,6 +33,7 @@ class AuthController extends Controller
         $arr = [
             'email' => $request->email,
             'password' => $request->password,
+            'status' => 1,
         ];
 
         if (Auth::attempt($arr)) {
@@ -39,18 +44,17 @@ class AuthController extends Controller
                 Cookie::queue('password', $request->password, 1440);
             }
 
-            return view('admin.home');
+            return redirect()->route('admin.home');
         }
 
-        return redirect()->back()->with('notice', 'Failed login')->with('email', $email);
+        return redirect()->back()->with('notice', 'Failed login');
     }
 
 
     function logout()
     {
         Auth::logout();
-
-        return view('web.home');
+        return redirect()->route('web.home');
     }
 
     public function register()
@@ -68,15 +72,25 @@ class AuthController extends Controller
             'confirm' => 'same:password',
         ]);
 
+        $token = Str::random(64);
+
         $data = [
             'name' => $request->name,
             'email' => $request->email,
             'password' => bcrypt($request->password),
-            'is_admin' => 0
+            'is_admin' => 0,
+            'status' => 0,
+            'token' => $token
         ];
 
+        Mail::send('auth.email.createAcount', ['token' => $token], function ($message) use ($request) {
+            $message->to($request->email);
+            $message->subject('Create Account by Email');
+        });
+
         User::create($data);
-        return view('auth.register')->with('notice', 'Create User Successfully');
+
+        return redirect()->route('web.register')->with('notice', 'We send e-mail to your email, please confirm');
     }
 
     public function profile()
@@ -111,9 +125,9 @@ class AuthController extends Controller
 
             $user->update($data);
 
-            return view('web.editprofile')->with('notice', 'Updated successfully');
+            return redirect()->route('web.profile')->with('notice', 'Updated successfully');
         } else {
-            return view('web.editprofile')->with('notice', 'Updated Failed! Password check false ');
+            return redirect()->route('web.profile')->with('notice', 'Updated Failed! Password check false ');
         }
     }
 }
